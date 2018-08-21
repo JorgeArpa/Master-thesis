@@ -1,0 +1,116 @@
+\chapter[Conclusions and future works]{Conclusion and future works}
+\label{cap:Conclusion}
+\begin{Resumen}
+Hereafter, the main conclusions and contributions of this work are stated, altogether with a long term scope of the eventual future works that this work may have on several branches of studies impacted, so far as the studies carried out thereafter.
+\end{Resumen}
+\PartialToc
+\section{Conclusion}
+\label{Conclusion:Conclusion}
+
+Objectifs reachment?
+
+\section{Contribution}
+
+\subsection{Industrial use}
+\label{sec:manual:matematicas}
+
+\section{Areas of improvement}
+\label{sec:manual:hyperref}
+
+Multiple exploitation paths and utilities stand before HERGE, though still several adjustments may be done and overall the others departments compromise is due to its complete adoption.
+
+
+
+\begin{minipage}{\textwidth}
+	\begin{verbatim}
+    \colorlet{colorEnlace}{black} 
+	
+	\usepackage[
+	    {colorlinks},
+	    {linkcolor=colorEnlace},
+	    {citecolor=colorEnlace},
+	    {urlcolor=colorEnlace},
+	    {bookmarksnumbered},
+	    {breaklinks},
+	    ]{hyperref}
+	\end{verbatim}
+\end{minipage}
+
+\medskip
+
+% ---------------------------------------------------------------------
+
+
+
+
+\LaTeX\ 
+\verb'\documentclass[tfg, rm, nomathskip, castellano]{tfgtfmetsii}'
+
+% ---------------------------------------------------------------------
+
+\begin{minipage}{\textwidth}
+	\begin{verbatim}
+	\usepackage{siunitx}
+
+	\ifenglish
+	    \sisetup{output-decimal-marker={.}}
+	\else
+	    \sisetup{output-decimal-marker={,}}
+	\fi
+	\end{verbatim}
+\end{minipage}
+
+
+\verb'G = \SI{6.6742(10)e-11}{\newton\square\metre\per\square\kilogram}'\\[1ex]
+$G = \SI{6.6742(10)e-11}{\newton\square\metre\per\square\kilogram}$
+
+\verb'c = \SI{299792458}{\meter\per\second}'\\[1ex]
+$c = \SI{299792458}{\meter\per\second}$
+
+\verb'\SI{15}{\percent}'\\[1ex]
+$\SI{15}{\percent}$
+
+\verb'\num{34572.346e3}'\\[1ex]
+$\num{3.346e3}$
+
+La descripci completa del paquete la encontrar en:
+
+{\small\url{http://osl.ugr.es/CTAN/macros/latex/contrib/siunitx/siunitx.pdf}}
+
+\verb'\SI{300}{\EURO}'\\[1ex]
+$\SI{300}{\EURO}$
+
+
+
+
+% ---------------------------------------------------------------------
+% ---------------------------------------------------------------------
+\subsection{Future works}
+\label{Conclusion:Future works}
+Quitar esta seccion ??
+
+\section{Personal and professional impact of the internship}
+\label{sec:manual:impact}
+
+Quitar "of the internship???" del titulo
+
+Porque continuar o no en Rte
+
+Estos son los pasos que debes seguir para \index{Manual de la plantilla!Empezar un nuevo proyecto}empezar un proyecto nuevo con la plantilla \linebreak \texttt{tfgtfmetsii.cls}:
+
+\begin{enumerate}
+
+	\item Duplica la carpeta de ejemplo que has descargado.
+    \item Abre el fichero `\verb'Documento_maestro.tex'' con tu editor preferido de \LaTeX.
+    \item Gudalo con un nuevo nombre.
+    \item Conserva los comandos relativos a: capulos, secciones, bibliograf, etc., que puedan serte es en la posterior confeccin de tu documento.
+    \item Elige las opciones de la plantilla `\texttt{tfgtfmetsii.cls}' seg tus necesidades, \autoref{sec:manual:opciones}.
+        
+
+\end{enumerate}
+
+
+% ---------------------------------------------------------------------
+% ---------------------------------------------------------------------
+% ---------------------------------------------------------------------
+% Fin

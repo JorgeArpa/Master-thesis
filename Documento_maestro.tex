@@ -1,0 +1,237 @@
+% ---------------------------------------------------------------------
+%                      DOCUMENTO DE EJEMPLO
+%                    DE TFG/TFM DE LA ETSII
+% ---------------------------------------------------------------------
+
+\documentclass[tfm, rm, english]{tfgtfmetsii}
+\usepackage[titletoc]{appendix}
+\usepackage[backref=true]{biblatex}
+\usepackage[colorlinks=false]{hyperref}
+\usepackage{cleveref}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+%\hypersetup{
+ %   colorlinks=true,
+  %  linkcolor=blue,
+   % filecolor=magenta,      
+    %urlcolor=cyan,
+%}
+ 
+%\urlstyle{same}
+
+
+%\usepackage[pagebackref]{hyperref}
+%\usepackage[hyperpageref]{backref}
+%\usepackage[colorlinks]{hyperref}
+%\hypersetup{pdffitwindow=true,linkcolor=LightSkyBlue,citecolor=Sienna,urlcolor=Navy,menucolor=black}
+%\usepackage[hyperpageref]{backref}
+
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatother
+% Opciones de la clase 'editorialupv'
+%
+% tfg         - TFG
+% tfm         - TFM
+% rm          - Tipo de letra roman
+% sf          - Tipo de letra sanserif
+% nomathskip  - No se modifican las distancias de las ecuaciones 
+%
+% castellano  - La publicaci�n est� escrita en castellano
+% valencia    - La publicaci� est� escrita en valenci�
+% english     - La publicaci�n est� escrita en ingl�s
+
+% T�tulo del TFG
+
+
+\newcommand{\TFGtitulo}{Este es el t�tulo del TFG}
+
+% T�tulo del TFM
+
+\newcommand{\TFMtitulo}{Automatic representation of the electrical grid layout}
+
+% ---------------------------------------------------------------------
+% Configuraciones presonalizadas 
+
+\input{1.Opening/preambulo.tex}
+
+\addbibresource{referencias.bib}
+\bibliography{referencias}
+%\bibliographystyle{unsrt}
+\DefineBibliographyStrings{english}{%
+    backrefpage  = {see p.}, % for single page number
+    backrefpages = {see pp.} % for multiple page numbers
+}
+
+
+
+% ---------------------------------------------------------------------
+% Las carpetas para los gr�ficos
+
+\graphicspath{
+	{./figuras/}
+	{./logos/}
+	}
+
+% ---------------------------------------------------------------------
+
+\title{
+	Automatic representation of the electrical grid layout\\
+	Manual de uso de la plantilla para \LaTeX\ de \TF{}s de la ETSII\\[3ex]
+	\mdseries\large	Enero de 2017
+	}
+
+\author{
+	Jorge Arpa Garzaran
+}
+
+% ---------------------------------------------------------------------
+% ---------------------------------------------------------------------
+% ---------------------------------------------------------------------
+% ---------------------------------------------------------------------
+
+
+\newcommand{\PartialToc}{\hrule\vspace*{1pc}%
+\startcontents[Chapter]\vbox{\bfseries\Large Overview}
+\printcontents[Chapter]{}{1}{}\vspace*{1pc}\hrule}
+
+
+\begin{document}
+
+
+
+\input{referencias_cruzadas}
+
+% -------------------------------------------------------
+
+\frontmatter
+
+% -------------------------------------------------------
+% P�gina de t�tulo
+
+%\maketitle	
+
+\input{1.Opening/portada.tex}
+
+% -------------------------------------------------------
+% Resumen, pr�logo o prefacio
+
+\cleardoublepage
+\phantomsection
+
+\addcontentsline{toc}{chapter}{\abstractname}
+\setcounter{tocdepth}{3}
+
+\input{1.Opening/declaration.tex}
+
+\input{1.Opening/cap_Resumen.tex}
+
+\input{1.Opening/agradecimientos.tex}
+
+\input{1.Opening/Acronyms.tex}
+
+% -------------------------------------------------------
+% �ndice: tabla de contenidos
+
+
+\cleardoublepage
+\phantomsection
+
+%\addcontentsline{toc}{chapter}{\contentsname}
+%\setcounter{tocdepth}{2}
+%\addcontentsline{toc}{subsection}{\subsectionsname}%{\arabic{chapter.\arabic{section}.\arabic{subsection}}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+% -------------------------------------------------------
+% Numeraci�n de p�ginas n�meros ar�bicos
+% Primer cap�tulo en p�gina 1
+
+\mainmatter
+
+% -------------------------------------------------------
+% -------------------------------------------------------
+% -------------------------------------------------------
+% Estructura en partes del TFG/TFM
+
+%\part{Memory}
+
+
+% Cap�tulos de la memoria
+
+\input{2.Chapters/Introduction.tex}
+
+\input{2.Chapters/Approach.tex}
+
+\input{2.Chapters/Automatic_image_generation.tex}
+
+\input{2.Chapters/Results.tex}
+
+\input{2.Chapters/Conclusions_and_future_works.tex}
+
+%\input{.....}
+
+%\input{.....}
+
+%\part{Budget}
+
+%\input{presupuesto}
+
+
+%\input{planos}
+
+% Otras partes
+
+%\part{....}
+
+%\input{.....}
+
+
+% -------------------------------------------------------
+% -------------------------------------------------------
+% -------------------------------------------------------
+% Bibliograf�a
+
+
+\bibitemsep = 3ex
+\bibhang = 2em
+
+
+%\printbibliography[heading=bibintoc, title=\bibname, type=misc ]
+\printbibheading[heading=bibintoc]
+
+\printbibliography[type=article,heading=subbibintoc,title={Articles}]
+\printbibliography[type=book,heading=subbibintoc,title={Rte internal documents}]
+
+
+%\printbibl\section{}iography[heading=subibintoc, type=article, prenote={Articles}]
+%\printbibliography[heading=subibintoc, type=book, prenote={Rte internal documents}]
+
+
+
+
+
+
+% -------------------------------------------------------
+% �ndice alfab�tico
+
+\cleardoublepage
+\phantomsection
+
+\part{Appendix}
+\begin{appendices}
+
+
+\input{4.Appendix/Diagram_layout_samples_and_evolution.tex}
+\input{4.Appendix/FME_Block_diagram_scheme.tex}
+\end{appendices}
+\addcontentsline{toc}{chapter}{\indexname}
+
+\printindex
+
+% -------------------------------------------------------
+% Fin del documento
+
+\end{document}
